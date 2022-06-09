@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --cinza-escuro: #232429;
+    --cinza-claro: #cccccc;
+    --cinza-botao: #34353a;
+    --cinza-menu: #1a1b1f;
+    --branco: #ffffff;
+    --azul: #00ffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    overflow-x: none;
+    user-select: none;
+}
+::-webkit-input-placeholder {
+    color: var(--branco);
+ }
+ ::-webkit-scrollbar{
+     display: none;
+ }
+body{
+    background-color: var(--cinza-escuro);
+}
+.container_cabecalho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    height: 1.5rem;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.linha1{
+    background-color: var(--branco);
+    width: 2rem;
+    height: .2rem;
+    border-radius: 1rem;
+}
+.linha2{
+    background-color: var(--branco);
+    width: 1rem;
+    height: .2rem;
+    border-radius: 1rem;
+}
+.menu_lateral{
+    color: var(--branco);
+    z-index: 5;
+    position: absolute;
+    padding: 1rem;
+    background-color: var(--cinza-menu);
+    width: 40vw;
+    height: 100vh;
+    border-radius: 0 1rem 0 0;
+    left: -50%;
+    transition: 0.25s;
+}
+.menu_lateral-ativo{
+    position: absolute;
+    left: 0;
+    transition: 0.25s;
+}
+.menu_lateral h2{
+    margin-top: 1rem;
+}
+.menu_lateral p{
+    margin-bottom: 2rem;
+}
+.perfil i:before{
+    background-image: url(img/foto_perfil.jpg);
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+.titulo_modelo{
+    padding: 1rem;
+    line-height: 2rem;
+    font-weight: 100;
+}
+.titulo_modelo p{
+    color: var(--cinza-claro);
+}
+.titulo_modelo h1{
+    color: var(--branco);
+    font-size: 3rem;
+}
+.espaco_imagem{
+    height: 12.5rem;
+}
+.imagem_carro i:before{
+    position: absolute;
+    left: 1rem;
+    top: 7.5rem;
+    background-image: url(img/tesla.png);
+    background-size: 27rem;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    width: 25rem;
+    height: 25rem;
+}
+.container_status{
+    padding: 1rem;
+    color: var(--branco);
+}
+.container_status h2{
+    font-size: 1.4rem;
+    margin-bottom: .4rem;
+}
+.grid_status{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: .9rem;
+}
+.grid_status h3{
+    color: var(--cinza-claro);
+    font-weight: lighter;
+}
+.grid_status p{
+    font-weight: bold;
+    margin-left: 1rem;
+}
+#battery::before{
+    background-image: url(img/icon_battery.png);
+    background-size: .5rem;
+    background-repeat: no-repeat;
+    display: inline-block;
+    content: "";
+    width: .5rem;
+    height: .8rem;
+    padding-right: .2rem;
+}
+#range:before{
+    background-image: url(img/icon_range.png);
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    display: inline-block;
+    content: "";
+    width: 1.1rem;
+    height: .8rem;
+}
+#parked:before{
+    background-image: url(img/icon_parking.png);
+    background-size: .8rem;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    width: 1.1rem;
+    height: .8rem;
+}
+.container_destino{
+    padding: 1rem;
+}
+.campo{
+    background-color: var(--cinza-botao);
+    border-radius: .5rem;
+    box-shadow: 0 0 2rem -1rem;
+}
+.input_destino{
+    color: var(--branco);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    padding: 1rem 0;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+#icone_local1::before{
+    position: absolute;
+    background-image: url(img/icone_local1.png);
+    background-size: 1.2rem;
+    background-repeat: no-repeat;
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 2.4rem;
+    top: 31.4rem;
+}
+#pipe{
+    position: absolute;
+    background-color: var(--cinza-claro);
+    content: "";
+    display: inline-block;
+    width: .1rem;
+    height: 2rem;
+    top: 30.9rem;
+    left: 83%;
+}
+#icone_local2::before{
+    position: absolute;
+    background-image: url(img/icon_local2.png);
+    background-size: 1.6rem;
+    background-repeat: no-repeat;
+    content: "";
+    width: 2rem;
+    height: 1.8rem;
+    left: 86%;
+    top: 31rem;
+}
+.container_box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+    padding: 1rem;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--cinza-botao);
+    width: 10rem;
+    height: 10rem;
+    margin-right: 1rem;
+    text-align: center;
+    color: var(--branco);
+    border-radius: 1rem;
+}
+.box h4{
+    font-size: 2rem;
+}
+.box p{
+    color: var(--cinza-claro);
+    font-size: .9rem;
+}
+
+@media screen and (min-width: 542px){
+    body{
+        width: 50rem;
+        margin: 0 auto;
+    }
+    .imagem_carro i:before{
+        position: absolute;
+        left: 40%;
+        top: 7.5rem;
+        background-image: url(img/tesla.png);
+        background-size: 30rem;
+        background-repeat: no-repeat;
+        content: "";
+        display: inline-block;
+        width: 35rem;
+        height: 35rem;
+    }
+    #icone_local2::before{
+        display: none;
+    }
+    #icone_local1::before{
+        display: none;
+    }
+    #pipe{
+        display: none;
+    }
+}
